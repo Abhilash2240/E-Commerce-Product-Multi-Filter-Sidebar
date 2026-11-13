@@ -21,10 +21,10 @@ export const SORT_OPTIONS = Object.freeze({
  * Sort options presentation metadata
  */
 export const SORT_OPTIONS_LIST = Object.freeze([
-  { id: SORT_OPTIONS.RELEVANCE, label: 'Featured' },
-  { id: SORT_OPTIONS.PRICE_ASC, label: 'Price: Low to High' },
-  { id: SORT_OPTIONS.PRICE_DESC, label: 'Price: High to Low' },
-  { id: SORT_OPTIONS.RATING_DESC, label: 'Rating: High to Low' }
+  { value: SORT_OPTIONS.RELEVANCE, id: SORT_OPTIONS.RELEVANCE, label: 'Relevance' },
+  { value: SORT_OPTIONS.PRICE_ASC, id: SORT_OPTIONS.PRICE_ASC, label: 'Price: Low to High' },
+  { value: SORT_OPTIONS.PRICE_DESC, id: SORT_OPTIONS.PRICE_DESC, label: 'Price: High to Low' },
+  { value: SORT_OPTIONS.RATING_DESC, id: SORT_OPTIONS.RATING_DESC, label: 'Top Rated First' }
 ]);
 
 /**

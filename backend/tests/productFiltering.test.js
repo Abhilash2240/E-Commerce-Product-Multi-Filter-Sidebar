@@ -116,3 +116,4 @@ test('Product Service - Dataset immutability', () => {
   assert.strictEqual(products.length, initialLength);
   assert.deepStrictEqual(products[0], initialFirst);
 });
+

@@ -1,7 +1,6 @@
 import { Router } from 'express';
-import { getMeta, getProducts } from '../services/productService.js';
+import productRoutes from './productRoutes.js';
 import { CATEGORIES, SORT_OPTIONS_LIST } from '../utils/constants.js';
-import { validateQueryParams } from '../validators/queryValidator.js';
 
 const router = Router();
 
@@ -29,26 +28,7 @@ router.get('/sort-options', (req, res) => {
   });
 });
 
-// Products endpoint (executes pipeline: validate -> filter -> sort)
-router.get('/products', (req, res, next) => {
-  try {
-    const meta = getMeta();
-    const validatedQuery = validateQueryParams(req.query, meta);
-    const result = getProducts(req.query);
-
-    res.status(200).json({
-      success: true,
-      count: result.count,
-      total: result.total,
-      priceBoundaries: { minPrice: meta.minPrice, maxPrice: meta.maxPrice },
-      validatedQuery,
-      meta,
-      products: result.products,
-      data: result.products
-    });
-  } catch (err) {
-    next(err);
-  }
-});
+// Modular product routes: /api/products and /api/products/meta
+router.use('/products', productRoutes);
 
 export default router;
