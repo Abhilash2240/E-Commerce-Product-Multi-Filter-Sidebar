@@ -11,6 +11,7 @@ export const CATEGORIES = Object.freeze([
  * Supported sorting options for products
  */
 export const SORT_OPTIONS = Object.freeze({
+  RELEVANCE: 'relevance',
   PRICE_ASC: 'price_asc',
   PRICE_DESC: 'price_desc',
   RATING_DESC: 'rating_desc'
@@ -20,6 +21,7 @@ export const SORT_OPTIONS = Object.freeze({
  * Sort options presentation metadata
  */
 export const SORT_OPTIONS_LIST = Object.freeze([
+  { id: SORT_OPTIONS.RELEVANCE, label: 'Featured' },
   { id: SORT_OPTIONS.PRICE_ASC, label: 'Price: Low to High' },
   { id: SORT_OPTIONS.PRICE_DESC, label: 'Price: High to Low' },
   { id: SORT_OPTIONS.RATING_DESC, label: 'Rating: High to Low' }
@@ -42,3 +44,4 @@ export function computePriceBoundaries(products = []) {
     maxPrice: Math.max(...prices)
   };
 }
+

@@ -24,3 +24,4 @@ export function getAllProducts() {
 export function getProductPriceBoundaries() {
   return computePriceBoundaries(products);
 }
+
