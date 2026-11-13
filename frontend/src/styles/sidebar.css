@@ -1,0 +1,243 @@
+/* ==========================================================================
+   Filter Sidebar & Component Styles
+   ========================================================================== */
+
+.filter-sidebar {
+  width: var(--sidebar-width, 280px);
+  min-width: 260px;
+  background-color: var(--card-bg, #ffffff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--radius, 8px);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+  align-self: flex-start;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.filter-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.filter-sidebar-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main, #0f172a);
+  margin: 0;
+}
+
+.btn-clear-filters {
+  background: none;
+  border: none;
+  color: var(--primary-color, #2563eb);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-clear-filters:hover {
+  background-color: #eff6ff;
+  color: var(--primary-hover, #1d4ed8);
+}
+
+.filter-sidebar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fieldset and Legend */
+.filter-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.filter-fieldset:last-child {
+  margin-bottom: 0;
+}
+
+.filter-legend {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main, #0f172a);
+  margin-bottom: 0.75rem;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+.filter-options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Checkbox & Radio Labels */
+.filter-checkbox-label,
+.filter-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-main, #0f172a);
+  user-select: none;
+  transition: color 0.15s ease;
+}
+
+.filter-checkbox-label:hover,
+.filter-radio-label:hover {
+  color: var(--primary-color, #2563eb);
+}
+
+.filter-checkbox,
+.filter-radio {
+  width: 1.05rem;
+  height: 1.05rem;
+  cursor: pointer;
+  accent-color: var(--primary-color, #2563eb);
+}
+
+.filter-label-text {
+  line-height: 1.25;
+}
+
+.filter-helper-text {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted, #64748b);
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Dual Range Price Slider
+   ========================================================================== */
+
+.price-values-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.price-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #f1f5f9;
+  color: var(--text-main, #0f172a);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.price-separator {
+  font-size: 0.8rem;
+  color: var(--text-muted, #64748b);
+}
+
+.price-slider-container {
+  position: relative;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+/* Base Track */
+.slider-track-bg {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background-color: var(--border-color, #e2e8f0);
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* Active Highlight Track */
+.slider-track-active {
+  position: absolute;
+  height: 6px;
+  background-color: var(--primary-color, #2563eb);
+  border-radius: 3px;
+  z-index: 2;
+  transition: background-color 0.15s ease;
+}
+
+/* Overlapping Inputs */
+.thumb-range {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  outline: none;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* WebKit Thumb */
+.thumb-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2.5px solid var(--primary-color, #2563eb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.1s ease, border-color 0.15s ease;
+}
+
+.thumb-range::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  border-color: var(--primary-hover, #1d4ed8);
+}
+
+.thumb-range::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  background-color: #f0f7ff;
+}
+
+/* Mozilla Firefox Thumb */
+.thumb-range::-moz-range-thumb {
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2.5px solid var(--primary-color, #2563eb);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.1s ease, border-color 0.15s ease;
+}
+
+.thumb-range::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  border-color: var(--primary-hover, #1d4ed8);
+}
+
+.thumb-range::-moz-range-thumb:active {
+  transform: scale(1.2);
+  background-color: #f0f7ff;
+}
+
+.slider-boundary-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted, #64748b);
+  margin-top: 0.25rem;
+}
