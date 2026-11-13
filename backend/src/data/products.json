@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "name": "Noise-Cancelling Wireless Headphones",
+    "category": "Electronics",
+    "price": 8999,
+    "rating": 4.8,
+    "image": "https://picsum.photos/seed/p1/400/400"
+  },
+  {
+    "id": 2,
+    "name": "Ultra HD Smart LED TV 43-inch",
+    "category": "Electronics",
+    "price": 28999,
+    "rating": 4.6,
+    "image": "https://picsum.photos/seed/p2/400/400"
+  },
+  {
+    "id": 3,
+    "name": "Mechanical Gaming Keyboard RGB",
+    "category": "Electronics",
+    "price": 3499,
+    "rating": 4.5,
+    "image": "https://picsum.photos/seed/p3/400/400"
+  },
+  {
+    "id": 4,
+    "name": "Ergonomic Wireless Optical Mouse",
+    "category": "Electronics",
+    "price": 999,
+    "rating": 4.2,
+    "image": "https://picsum.photos/seed/p4/400/400"
+  },
+  {
+    "id": 5,
+    "name": "Flagship 5G Smartphone 256GB",
+    "category": "Electronics",
+    "price": 49999,
+    "rating": 4.9,
+    "image": "https://picsum.photos/seed/p5/400/400"
+  },
+  {
+    "id": 6,
+    "name": "Budget Wired Earphones 3.5mm",
+    "category": "Electronics",
+    "price": 199,
+    "rating": 1.8,
+    "image": "https://picsum.photos/seed/p6/400/400"
+  },
+  {
+    "id": 7,
+    "name": "Fast Charging Braided USB-C Cable",
+    "category": "Electronics",
+    "price": 299,
+    "rating": 1.4,
+    "image": "https://picsum.photos/seed/p7/400/400"
+  },
+  {
+    "id": 8,
+    "name": "Portable Bluetooth Speaker 20W",
+    "category": "Electronics",
+    "price": 2499,
+    "rating": 3.8,
+    "image": "https://picsum.photos/seed/p8/400/400"
+  },
+  {
+    "id": 9,
+    "name": "Smart Fitness Band with Heart Rate Monitor",
+    "category": "Electronics",
+    "price": 1999,
+    "rating": 4.2,
+    "image": "https://picsum.photos/seed/p9/400/400"
+  },
+  {
+    "id": 10,
+    "name": "Magnetic Wireless Power Bank 10000mAh",
+    "category": "Electronics",
+    "price": 2499,
+    "rating": 3.5,
+    "image": "https://picsum.photos/seed/p10/400/400"
+  },
+  {
+    "id": 11,
+    "name": "Classic Regular Fit Cotton T-Shirt",
+    "category": "Apparel",
+    "price": 499,
+    "rating": 4.1,
+    "image": "https://picsum.photos/seed/p11/400/400"
+  },
+  {
+    "id": 12,
+    "name": "Slim Fit Stretch Denim Jeans",
+    "category": "Apparel",
+    "price": 1999,
+    "rating": 4.3,
+    "image": "https://picsum.photos/seed/p12/400/400"
+  },
+  {
+    "id": 13,
+    "name": "Pure Linen Casual Button-Down Shirt",
+    "category": "Apparel",
+    "price": 2499,
+    "rating": 4.7,
+    "image": "https://picsum.photos/seed/p13/400/400"
+  },
+  {
+    "id": 14,
+    "name": "Heavyweight Fleece Hooded Sweatshirt",
+    "category": "Apparel",
+    "price": 1899,
+    "rating": 4.5,
+    "image": "https://picsum.photos/seed/p14/400/400"
+  },
+  {
+    "id": 15,
+    "name": "Water-Resistant Winter Puffer Jacket",
+    "category": "Apparel",
+    "price": 4999,
+    "rating": 4.8,
+    "image": "https://picsum.photos/seed/p15/400/400"
+  },
+  {
+    "id": 16,
+    "name": "Cheap Graphic Print Polyester Tee",
+    "category": "Apparel",
+    "price": 299,
+    "rating": 1.5,
+    "image": "https://picsum.photos/seed/p16/400/400"
+  },
+  {
+    "id": 17,
+    "name": "Moisture-Wicking Athletic Running Shorts",
+    "category": "Apparel",
+    "price": 799,
+    "rating": 3.9,
+    "image": "https://picsum.photos/seed/p17/400/400"
+  },
+  {
+    "id": 18,
+    "name": "Formal Solid Notch Lapel Blazer",
+    "category": "Apparel",
+    "price": 6499,
+    "rating": 4.6,
+    "image": "https://picsum.photos/seed/p18/400/400"
+  },
+  {
+    "id": 19,
+    "name": "Breathable Cotton Chino Trousers",
+    "category": "Apparel",
+    "price": 1499,
+    "rating": 3.8,
+    "image": "https://picsum.photos/seed/p19/400/400"
+  },
+  {
+    "id": 20,
+    "name": "Pack of 3 Ankle Socks",
+    "category": "Apparel",
+    "price": 299,
+    "rating": 2.5,
+    "image": "https://picsum.photos/seed/p20/400/400"
+  },
+  {
+    "id": 21,
+    "name": "Pro Cushioning Road Running Shoes",
+    "category": "Footwear",
+    "price": 4999,
+    "rating": 4.7,
+    "image": "https://picsum.photos/seed/p21/400/400"
+  },
+  {
+    "id": 22,
+    "name": "Casual Canvas Low-Top Sneakers",
+    "category": "Footwear",
+    "price": 1499,
+    "rating": 4.1,
+    "image": "https://picsum.photos/seed/p22/400/400"
+  },
+  {
+    "id": 23,
+    "name": "Genuine Leather Formal Oxford Shoes",
+    "category": "Footwear",
+    "price": 3999,
+    "rating": 4.5,
+    "image": "https://picsum.photos/seed/p23/400/400"
+  },
+  {
+    "id": 24,
+    "name": "Rough Terrain Hiking Boots",
+    "category": "Footwear",
+    "price": 5999,
+    "rating": 4.8,
+    "image": "https://picsum.photos/seed/p24/400/400"
+  },
+  {
+    "id": 25,
+    "name": "Everyday Slip-On Loafers",
+    "category": "Footwear",
+    "price": 2299,
+    "rating": 3.7,
+    "image": "https://picsum.photos/seed/p25/400/400"
+  },
+  {
+    "id": 26,
+    "name": "Ultra-Lightweight Mesh Walking Shoes",
+    "category": "Footwear",
+    "price": 1999,
+    "rating": 4.3,
+    "image": "https://picsum.photos/seed/p26/400/400"
+  },
+  {
+    "id": 27,
+    "name": "Flimsy Plastic Flip Flops",
+    "category": "Footwear",
+    "price": 199,
+    "rating": 1.2,
+    "image": "https://picsum.photos/seed/p27/400/400"
+  },
+  {
+    "id": 28,
+    "name": "Orthopedic Comfort Walking Sandals",
+    "category": "Footwear",
+    "price": 1299,
+    "rating": 3.9,
+    "image": "https://picsum.photos/seed/p28/400/400"
+  },
+  {
+    "id": 29,
+    "name": "High-Top Suede Skate Sneakers",
+    "category": "Footwear",
+    "price": 2999,
+    "rating": 4.4,
+    "image": "https://picsum.photos/seed/p29/400/400"
+  },
+  {
+    "id": 30,
+    "name": "Waterproof Lightweight Pool Slides",
+    "category": "Footwear",
+    "price": 599,
+    "rating": 3.2,
+    "image": "https://picsum.photos/seed/p30/400/400"
+  }
+]
