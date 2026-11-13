@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SORT_OPTIONS_LIST } from '../utils/constants.js';
+import { SORT_OPTIONS, SORT_OPTIONS_LIST } from '../utils/constants.js';
+import { validateQueryParams } from '../validators/queryValidator.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -52,6 +53,35 @@ export function filterProducts(items = products, filters = {}, meta = getMeta())
     if (typeof minRating === 'number' && minRating !== null && item.rating < minRating) return false;
     return true;
   });
+}
+
+// Sorts product items based on requested criteria with tie-breaking rules.
+export function sortProducts(items = [], sortKey = SORT_OPTIONS.RELEVANCE) {
+  const copy = [...items];
+  switch (sortKey) {
+    case SORT_OPTIONS.PRICE_ASC:
+      return copy.sort((a, b) => a.price - b.price || b.rating - a.rating || a.id - b.id);
+    case SORT_OPTIONS.PRICE_DESC:
+      return copy.sort((a, b) => b.price - a.price || b.rating - a.rating || a.id - b.id);
+    case SORT_OPTIONS.RATING_DESC:
+      return copy.sort((a, b) => b.rating - a.rating || a.price - b.price || a.id - b.id);
+    case SORT_OPTIONS.RELEVANCE:
+    default:
+      return copy.sort((a, b) => a.id - b.id);
+  }
+}
+
+// Executes the full pipeline: validates raw query, filters dataset, and sorts the results.
+export function getProducts(rawQuery = {}) {
+  const meta = getMeta();
+  const validated = validateQueryParams(rawQuery, meta);
+  const filtered = filterProducts(products, validated, meta);
+  const sorted = sortProducts(filtered, validated.sort);
+  return {
+    count: sorted.length,
+    total: products.length,
+    products: sorted
+  };
 }
 
 // Backwards-compatible accessor for unfiltered products inventory.

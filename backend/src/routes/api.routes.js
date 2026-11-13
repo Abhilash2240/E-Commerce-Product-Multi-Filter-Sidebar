@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getAllProducts, getProductPriceBoundaries } from '../services/productService.js';
+import { getMeta, getProducts } from '../services/productService.js';
 import { CATEGORIES, SORT_OPTIONS_LIST } from '../utils/constants.js';
 import { validateQueryParams } from '../validators/queryValidator.js';
 
@@ -29,19 +29,22 @@ router.get('/sort-options', (req, res) => {
   });
 });
 
-// Products endpoint (validates and sanitizes query params; product filtering not implemented yet)
+// Products endpoint (executes pipeline: validate -> filter -> sort)
 router.get('/products', (req, res, next) => {
   try {
-    const priceBoundaries = getProductPriceBoundaries();
-    const validatedQuery = validateQueryParams(req.query, priceBoundaries);
-    const allProducts = getAllProducts();
+    const meta = getMeta();
+    const validatedQuery = validateQueryParams(req.query, meta);
+    const result = getProducts(req.query);
 
     res.status(200).json({
       success: true,
-      count: allProducts.length,
-      priceBoundaries,
+      count: result.count,
+      total: result.total,
+      priceBoundaries: { minPrice: meta.minPrice, maxPrice: meta.maxPrice },
       validatedQuery,
-      data: allProducts
+      meta,
+      products: result.products,
+      data: result.products
     });
   } catch (err) {
     next(err);
