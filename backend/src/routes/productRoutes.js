@@ -10,3 +10,4 @@ router.get('/meta', getProductMeta);
 router.get('/', getProducts);
 
 export default router;
+
